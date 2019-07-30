@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{xepersian}
+\settextfont{Noto Naskh Arabic}
+\setlatintextfont{Noto Sans}
+\begin{document}
+
+سلام این یک متن فارسی است.
+
+\begin{latin}
+  Here is english section.
+  \cite{greenwade93}
+\end{latin}
+
+\setLTRbibitems
+\makeatletter
+\bidi@AtBeginEnvironment{thebibliography}{\latinfont}
+\makeatother
+\bibliographystyle{plain}
+\bibliography{ref.bib}
+\end{document}
